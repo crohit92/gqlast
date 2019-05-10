@@ -3,7 +3,6 @@
  */
 var valueSeperatorInObjectKeys = ',';
 function gqlast(literals, ...placeholders) {
-    debugger
     const result = [...literals];
     for (let index = 0; index < placeholders.length; index++) {
         parsedPlaceholder = parsePlaceholder(placeholders[index]);
