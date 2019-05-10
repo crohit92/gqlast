@@ -49,7 +49,7 @@ mutation {
 ```
 
 **createUser(user:[object Object])** is the issue.
-I tried using graphql-tag aswell but the same issue exists there aswell.
+I tried using [graphql-tag](https://github.com/apollographql/graphql-tag) aswell but the same issue exists there aswell.
 
 The intended outcome was 
 ```
