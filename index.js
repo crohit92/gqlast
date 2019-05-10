@@ -44,4 +44,5 @@ function parseObject(object) {
     result += '}';
     return result;
 }
-module.exports = gqlast;
+
+export default gqlast;
