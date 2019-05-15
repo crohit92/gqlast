@@ -63,12 +63,12 @@ export class ApiService {
     private firstChildOfRootField(query: string) {
         let indexOfOpeningBracket = query.indexOf('{');
         const fieldNameCharArr = [];
-
+        const newLine = `
+        `;
+        const space = ' ';
         for (let index = indexOfOpeningBracket + 1; index < query.length; index++) {
             const char = query[index];
-            const newLine = `
-            `;
-            if ((char.charCodeAt(0) === newLine.charCodeAt(0) || char.charCodeAt(0) === ' '.charCodeAt(0)) && fieldNameCharArr.length === 0) {
+            if ((char.charCodeAt(0) === newLine.charCodeAt(0) || char.charCodeAt(0) === space.charCodeAt(0)) && fieldNameCharArr.length === 0) {
                 continue;
             } else if (/[a-zA-Z]/.test(char)) {
                 fieldNameCharArr.push(char);
