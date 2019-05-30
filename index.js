@@ -14,7 +14,7 @@ function gqlast(literals, ...placeholders) {
 function parsePlaceholder(placeholder) {
     return (typeof placeholder === typeof '') ?
         `"${placeholder}"` :
-        (typeof placeholder === typeof 0 || typeof placeholder === typeof true ? placeholder :
+        (placeholder === undefined || placeholder === null || typeof placeholder === typeof 0 || typeof placeholder === typeof true ? placeholder :
             (placeholder instanceof Array ? parseArray(placeholder) :
                 (placeholder instanceof Date ? `"${placeholder.toISOString()}"` :
                     parseObject(placeholder)
